@@ -1,0 +1,1 @@
+GLPI native compact Summary redesign. Only front/summary.php wrapper class and css/summary.css presentation styles changed. No SQL, filter logic, or existing Hardware/Software pages changed. Uses GLPI --tblr variables and responsive 4/2/1 navigation cards.

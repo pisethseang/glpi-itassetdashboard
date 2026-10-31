@@ -1,0 +1,221 @@
+
+.ias-kpis,.ias-audit-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:18px 0}
+.ias-kpis>div,.ias-audit-grid>a{padding:18px;background:#f6f8fc;border:1px solid #e1e6ef;border-radius:10px;display:flex;flex-direction:column;gap:6px;text-decoration:none;color:#17263b}
+.ias-kpis strong,.ias-audit-grid strong{font-size:25px}.ias-kpis span,.ias-audit-grid span{font-size:12px;color:#56657b}
+.ias-section-nav{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0}.ias-section-nav a{border:1px solid #cad4e1;border-radius:7px;padding:10px 13px;text-decoration:none;color:#1d3855}.ias-section-nav a.active{background:#1d4ed8;color:white}
+.ias-filters{display:flex;flex-wrap:wrap;align-items:end;gap:12px;margin:16px 0}.ias-filters label{font-size:13px;display:flex;flex-direction:column;gap:5px;min-width:230px}.ias-filters select{max-width:380px;width:100%;padding:9px;border:1px solid #cbd5e1;border-radius:6px}.ias-filters button{background:#1d4ed8;border:0;color:white;border-radius:6px;padding:10px 20px;cursor:pointer}
+.ias-scroll{overflow:auto;margin:15px 0}.ias-table{width:100%;border-collapse:collapse}.ias-table th,.ias-table td{border-bottom:1px solid #e4e9f0;padding:10px;text-align:left}.ias-table th{background:#f5f7fb}.ias-table a,.ias-pager a{color:#1d4ed8;text-decoration:underline;font-weight:600}.ias-profile{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;padding:18px;background:#f6f8fc;border-radius:8px}.ias-profile strong{grid-column:1/-1}.ias-profile span{font-size:13px}.ias-pager{display:flex;gap:15px;justify-content:flex-end;margin:12px 0}.ias-note{font-size:12px;color:#64748b}
+@media(max-width:800px){.ias-kpis,.ias-audit-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.ias-profile{grid-template-columns:1fr}}
+/* Modern Summary presentation, scoped exclusively to this dashboard. */
+.iad-wrap { --ias-blue:#2563eb; --ias-border:#dfe6f0; --ias-ink:#1e293b; color:var(--ias-ink); }
+.iad-wrap .ias-kpis { gap:16px; margin:24px 0; }
+.iad-wrap .ias-kpis>div { background:#fff; border:1px solid var(--ias-border); border-radius:14px; padding:23px; box-shadow:0 3px 12px rgba(15,23,42,.035); }
+.iad-wrap .ias-kpis strong { font-size:30px; font-weight:750; letter-spacing:-.03em; color:#172554; }
+.iad-wrap .ias-kpis span { font-size:13px; }
+.iad-wrap .ias-section-nav { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; margin:27px 0; }
+.iad-wrap .ias-section-nav a { display:flex; align-items:center; justify-content:center; text-align:center; min-height:64px; padding:14px; border:1px solid var(--ias-border); border-radius:12px; background:white; font-weight:650; box-shadow:0 2px 8px rgba(15,23,42,.025); }
+.iad-wrap .ias-section-nav a:hover { border-color:#93c5fd; background:#eff6ff; }
+.iad-wrap .ias-section-nav a.active { background:#eff6ff; border-color:var(--ias-blue); color:#1d4ed8; }
+.iad-wrap h2 { font-size:22px; font-weight:750; margin:28px 0 9px; letter-spacing:-.02em; }
+.iad-wrap h3 { font-size:17px; font-weight:700; margin:24px 0 12px; }
+.iad-wrap .ias-filters { align-items:flex-end; padding:18px; border:1px solid var(--ias-border); border-radius:13px; background:#f8fafc; }
+.iad-wrap .ias-filters label { min-width:220px; flex:1; color:#334155; font-weight:600; }
+.iad-wrap .ias-filters select,.iad-wrap .ias-filters input[type="search"] { width:100%; min-height:43px; border:1px solid #cbd5e1; border-radius:9px; padding:10px 12px; background:white; color:#0f172a; font-weight:400; }
+.iad-wrap .ias-filters button { min-height:43px; background:var(--ias-blue); border-radius:9px; font-weight:650; padding:10px 18px; }
+.iad-wrap .ias-table { background:white; border:1px solid var(--ias-border); border-radius:12px; overflow:hidden; }
+.iad-wrap .ias-table th { background:#f1f5f9; color:#334155; font-weight:700; }
+.iad-wrap .ias-table th,.iad-wrap .ias-table td { padding:13px 15px; }
+.iad-wrap .ias-table tbody tr:hover { background:#f8fafc; }
+.iad-wrap .ias-profile { background:#f8fafc; border:1px solid var(--ias-border); border-radius:12px; }
+.iad-wrap .ias-panel-heading { display:flex; align-items:center; justify-content:space-between; gap:15px; }
+.iad-wrap .ias-panel-heading h2 { margin-bottom:5px; }
+.iad-wrap .ias-panel-heading p { color:#64748b; margin:0; }
+.iad-wrap .ias-panel-heading>i { color:var(--ias-blue); font-size:24px; }
+.iad-wrap .ias-audit-stats { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; margin:20px 0 26px; }
+.iad-wrap .ias-audit-stats>a,.iad-wrap .ias-audit-stats>div { display:flex; flex-direction:column; gap:9px; text-decoration:none; color:#1e293b; background:#fff; border:1px solid var(--ias-border); border-radius:14px; padding:21px; }
+.iad-wrap .ias-audit-stats>a:hover { border-color:#93c5fd; background:#f8fbff; }
+.iad-wrap .ias-audit-stats strong { font-size:30px; line-height:1.1; }
+.iad-wrap .ias-audit-stats span:last-child { font-size:13px; color:#64748b; }
+.iad-wrap .ias-stat-icon { font-size:17px; color:#2563eb; }
+.iad-wrap .ias-audit-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
+.iad-wrap .ias-audit-grid>a { background:#f8fafc; border-radius:12px; }
+.iad-wrap .ias-audit-detail { margin-top:28px; }
+.iad-wrap .ias-audit-filters { margin-top:14px; }
+.iad-wrap .ias-filters .iad-searchable { width:100%; }
+.iad-wrap .ias-filters .iad-searchable-input { min-height:43px; border-radius:9px; }
+@media(max-width:900px){ .iad-wrap .ias-section-nav { grid-template-columns:repeat(2,minmax(0,1fr)); } .iad-wrap .ias-audit-stats { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media(max-width:580px){ .iad-wrap .ias-audit-stats,.iad-wrap .ias-audit-grid,.iad-wrap .ias-kpis { grid-template-columns:1fr; } .iad-wrap .ias-filters label { min-width:100%; } }
+
+/* Inventory Analysis: two-column selectable cards, matching the approved reference. */
+.iad-wrap .ias-analysis { margin: 26px 0 30px; }
+.iad-wrap .ias-analysis-title { font-size: 22px; font-weight: 600; margin: 0 0 18px; line-height: 1.3; }
+.iad-wrap .ias-section-nav { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; margin:0; }
+.iad-wrap .ias-section-nav .ias-analysis-card {
+  display:flex; flex-direction:column; align-items:flex-start; justify-content:flex-start; text-align:left;
+  box-sizing:border-box; min-height:174px; padding:24px 25px; gap:0;
+  border:1px solid #d1d5db; border-radius:19px; background:#f8fafc;
+  text-decoration:none; color:#242933; box-shadow:none;
+  transition:border-color .18s ease,background-color .18s ease,box-shadow .18s ease;
+}
+.iad-wrap .ias-section-nav .ias-analysis-card:hover { background:#f1f5f9; border-color:#93a3b9; box-shadow:none; }
+.iad-wrap .ias-section-nav .ias-analysis-card:focus-visible { outline:3px solid #60a5fa; outline-offset:3px; }
+.iad-wrap .ias-section-nav .ias-analysis-card.active { background:#eff6ff; border:2px solid #2563eb; color:#1e293b; padding:23px 24px; }
+.iad-wrap .ias-section-nav .ias-analysis-card.active:hover { background:#e7f0ff; }
+.iad-wrap .ias-card-icons { display:flex; align-items:center; justify-content:space-between; width:100%; margin-bottom:21px; font-size:24px; line-height:1; color:#64748b; }
+.iad-wrap .ias-section-nav .ias-analysis-card.active .ias-card-icons { color:#2563eb; }
+.iad-wrap .ias-card-check { font-size:21px; }
+.iad-wrap .ias-card-title { display:block; color:inherit; font-size:21px; font-weight:600; line-height:1.3; }
+.iad-wrap .ias-card-description { display:block; color:#64748b; font-size:16px; font-weight:400; line-height:1.45; margin-top:9px; }
+@media (prefers-color-scheme:dark) {
+  .iad-wrap .ias-analysis-title { color:#e5e7eb; }
+}
+/* Support GLPI's explicit dark mode regardless of the operating-system theme. */
+[data-bs-theme="dark"] .iad-wrap .ias-section-nav .ias-analysis-card,
+body.dark .iad-wrap .ias-section-nav .ias-analysis-card,
+body.dark-mode .iad-wrap .ias-section-nav .ias-analysis-card {
+  background:#303030; border-color:#525252; color:#ececec;
+}
+[data-bs-theme="dark"] .iad-wrap .ias-section-nav .ias-analysis-card:hover,
+body.dark .iad-wrap .ias-section-nav .ias-analysis-card:hover,
+body.dark-mode .iad-wrap .ias-section-nav .ias-analysis-card:hover { background:#383838; }
+[data-bs-theme="dark"] .iad-wrap .ias-section-nav .ias-analysis-card.active,
+body.dark .iad-wrap .ias-section-nav .ias-analysis-card.active,
+body.dark-mode .iad-wrap .ias-section-nav .ias-analysis-card.active {
+  background:#10151f; border-color:#2563eb; color:#f0f0f0;
+}
+[data-bs-theme="dark"] .iad-wrap .ias-card-description,
+body.dark .iad-wrap .ias-card-description,
+body.dark-mode .iad-wrap .ias-card-description { color:#bdbdbd; }
+[data-bs-theme="dark"] .iad-wrap .ias-card-icons,
+body.dark .iad-wrap .ias-card-icons,
+body.dark-mode .iad-wrap .ias-card-icons { color:#cacaca; }
+[data-bs-theme="dark"] .iad-wrap .ias-section-nav .ias-analysis-card.active .ias-card-icons,
+body.dark .iad-wrap .ias-section-nav .ias-analysis-card.active .ias-card-icons,
+body.dark-mode .iad-wrap .ias-section-nav .ias-analysis-card.active .ias-card-icons { color:#3b82f6; }
+@media (max-width:640px) { .iad-wrap .ias-section-nav {grid-template-columns:1fr;} .iad-wrap .ias-section-nav .ias-analysis-card {min-height:150px;} }
+
+
+/* Compact GLPI-native Summary redesign (only .iad-summary-ui). */
+.iad-summary-ui {
+  --ias-surface: var(--tblr-bg-surface, var(--tblr-card-bg, #fff));
+  --ias-page: var(--tblr-body-bg, #f8f9fb);
+  --ias-text: var(--tblr-body-color, #263449);
+  --ias-muted: var(--tblr-secondary-color, #697b93);
+  --ias-line: var(--tblr-border-color, #dce2eb);
+  --ias-primary: var(--tblr-primary, #206bc4);
+  background:transparent; color:var(--ias-text); min-height:0;
+  padding:14px 20px 24px; font-family:inherit;
+}
+.iad-summary-ui .iad-header { margin-bottom:12px; }
+.iad-summary-ui .iad-header-left { gap:9px; }
+.iad-summary-ui .iad-header-icon { width:34px!important;height:34px!important;border-radius:7px;font-size:15px!important;background:var(--ias-primary); }
+.iad-summary-ui .iad-title { font-size:19px;line-height:1.2;color:var(--ias-text);margin:0; }
+.iad-summary-ui .iad-subtitle { font-size:12px;color:var(--ias-muted); }
+.iad-summary-ui .iad-tabs { border-color:var(--ias-line);margin-bottom:14px;gap:3px; }
+.iad-summary-ui .iad-tab { padding:7px 13px;font-size:12px;border-radius:6px 6px 0 0; }
+.iad-summary-ui .ias-kpis { margin:0 0 15px; gap:8px;grid-template-columns:repeat(4,minmax(0,1fr)); }
+.iad-summary-ui .ias-kpis>div { min-height:65px;padding:10px 13px;border:1px solid var(--ias-line);border-radius:8px;background:var(--ias-surface);box-shadow:none;gap:2px; }
+.iad-summary-ui .ias-kpis strong { font-size:22px;line-height:1.1;color:var(--ias-text);font-weight:700; }
+.iad-summary-ui .ias-kpis span {font-size:11px;color:var(--ias-muted);}
+.iad-summary-ui .ias-analysis { margin:7px 0 16px; }
+.iad-summary-ui .ias-analysis-title { margin:0 0 9px; font-size:15px;line-height:1.35;font-weight:650;color:var(--ias-text); }
+.iad-summary-ui .ias-analysis-title small {font-weight:400;font-size:11px;color:var(--ias-muted);margin-left:8px;}
+.iad-summary-ui .ias-section-nav { display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:0; }
+.iad-summary-ui .ias-section-nav .ias-analysis-card,
+.iad-summary-ui .ias-section-nav .ias-analysis-card.active {
+  display:flex;flex-direction:row;align-items:center;justify-content:flex-start;text-align:left;flex-wrap:wrap;
+  gap:3px 8px;min-height:68px;max-height:none;padding:10px 12px;
+  border:1px solid var(--ias-line);border-radius:8px;background:var(--ias-surface);
+  color:var(--ias-text);font-size:12px;box-shadow:none;transition:background .12s,border-color .12s;
+}
+.iad-summary-ui .ias-section-nav .ias-analysis-card:hover {background:var(--ias-page);border-color:var(--ias-primary);}
+.iad-summary-ui .ias-section-nav .ias-analysis-card.active {border:1px solid var(--ias-primary);background:color-mix(in srgb,var(--ias-primary) 7%,var(--ias-surface));box-shadow:inset 3px 0 0 var(--ias-primary);}
+.iad-summary-ui .ias-card-icons {display:flex;flex:0 0 20px;width:20px;margin:0;font-size:15px;line-height:1;color:var(--ias-muted);}
+.iad-summary-ui .ias-section-nav .ias-analysis-card.active .ias-card-icons {color:var(--ias-primary);}
+.iad-summary-ui .ias-card-check {display:none;}
+.iad-summary-ui .ias-card-title {display:block;flex:1;min-width:110px;font-size:12.5px;line-height:1.25;font-weight:650;color:inherit;}
+.iad-summary-ui .ias-card-description {display:block;flex-basis:100%;padding-left:28px;margin:0;font-size:10.5px;line-height:1.3;color:var(--ias-muted);}
+.iad-summary-ui h2:not(.ias-analysis-title) {font-size:17px;margin:15px 0 5px;color:var(--ias-text);}
+.iad-summary-ui h3 {font-size:14px;margin:15px 0 7px;color:var(--ias-text);}
+.iad-summary-ui p {font-size:12px;color:var(--ias-muted);margin-bottom:9px;}
+.iad-summary-ui .ias-filters {margin:9px 0 12px;padding:11px 13px;gap:8px;border-radius:8px;background:var(--ias-surface);border:1px solid var(--ias-line);align-items:end;}
+.iad-summary-ui .ias-filters label {min-width:145px;flex:1;gap:4px;font-size:11px;font-weight:600;color:var(--ias-text);}
+.iad-summary-ui .ias-filters input[type="search"],
+.iad-summary-ui .ias-filters select,
+.iad-summary-ui .ias-filters .iad-searchable-input {width:100%;min-height:34px;height:34px;box-sizing:border-box;padding:6px 10px;border-radius:5px;font-size:12px;border:1px solid var(--ias-line);background:var(--ias-surface);color:var(--ias-text);}
+.iad-summary-ui .ias-filters button[type="submit"] {min-height:34px;height:34px;padding:6px 14px;background:var(--ias-primary);color:white;border-radius:5px;font-size:12px;}
+.iad-summary-ui .ias-filters .iad-searchable {width:100%;min-width:0;}
+.iad-summary-ui .ias-filters .iad-searchable-menu {max-height:176px;min-width:0;max-width:100%;border-color:var(--ias-line);background:var(--ias-surface);border-radius:6px;z-index:1050;}
+.iad-summary-ui .ias-filters .iad-searchable-option {font-size:11px;padding:6px 9px;background:var(--ias-surface);color:var(--ias-text);}
+.iad-summary-ui .ias-filters .iad-searchable-option:hover,
+.iad-summary-ui .ias-filters .iad-searchable-highlight {background:var(--ias-page);}
+.iad-summary-ui .ias-scroll {margin:8px 0;overflow-x:auto;}
+.iad-summary-ui .ias-table {border:1px solid var(--ias-line);border-radius:6px;background:var(--ias-surface);font-size:12px;}
+.iad-summary-ui .ias-table th,.iad-summary-ui .ias-table td {padding:8px 10px;border-color:var(--ias-line);}
+.iad-summary-ui .ias-table th {background:var(--ias-page);color:var(--ias-text);font-weight:650;}
+.iad-summary-ui .ias-table tbody tr:hover {background:var(--ias-page);}
+.iad-summary-ui .ias-table a,.iad-summary-ui .ias-pager a {color:var(--ias-primary);}
+.iad-summary-ui .ias-note {font-size:11px;color:var(--ias-muted);}
+.iad-summary-ui .ias-profile {padding:12px;border-radius:7px;background:var(--ias-surface);border-color:var(--ias-line);}
+.iad-summary-ui .ias-audit-stats {gap:8px;margin:10px 0 14px;}
+.iad-summary-ui .ias-audit-stats>a,.iad-summary-ui .ias-audit-stats>div {padding:12px;gap:5px;border-radius:8px;background:var(--ias-surface);border-color:var(--ias-line);color:var(--ias-text);}
+.iad-summary-ui .ias-audit-stats strong {font-size:23px;}
+.iad-summary-ui .ias-audit-stats span:last-child {font-size:11px;color:var(--ias-muted);}
+.iad-summary-ui .ias-audit-grid {gap:8px;margin:10px 0;grid-template-columns:repeat(3,minmax(0,1fr));}
+.iad-summary-ui .ias-audit-grid>a {padding:12px;border-radius:8px;background:var(--ias-surface);border-color:var(--ias-line);color:var(--ias-text);}
+.iad-summary-ui .ias-audit-grid strong {font-size:20px;}
+.iad-summary-ui .ias-audit-detail {margin-top:15px;}
+.iad-summary-ui .ias-panel-heading>i {font-size:18px;color:var(--ias-primary);}
+@media(max-width:1150px) {.iad-summary-ui .ias-section-nav {grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media(max-width:700px) {.iad-summary-ui {padding:12px;} .iad-summary-ui .ias-kpis {grid-template-columns:repeat(2,minmax(0,1fr));} .iad-summary-ui .ias-audit-stats,.iad-summary-ui .ias-audit-grid {grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media(max-width:490px) {.iad-summary-ui .ias-section-nav {grid-template-columns:1fr;} .iad-summary-ui .ias-filters label {min-width:100%;} .iad-summary-ui .ias-audit-stats {grid-template-columns:1fr;}}
+
+/* Summary-only remote autocomplete. */
+.iad-summary-ui .ias-async-wrap{position:relative;width:100%;min-width:0}
+.iad-summary-ui .ias-async-wrap input{width:100%;min-height:38px;padding:8px 11px;border:1px solid var(--tblr-border-color,#cbd5e1);border-radius:7px;background:var(--tblr-bg-surface,#fff);color:inherit}
+.iad-summary-ui .ias-async-menu{position:absolute;top:calc(100% + 3px);left:0;right:0;z-index:1000;background:var(--tblr-bg-surface,#fff);color:inherit;border:1px solid var(--tblr-border-color,#cbd5e1);box-shadow:0 8px 22px rgba(0,0,0,.12);border-radius:7px;max-height:230px;overflow-y:auto}
+.iad-summary-ui .ias-async-menu[hidden]{display:none}
+.iad-summary-ui .ias-async-option{display:block;width:100%;text-align:left;padding:8px 12px;border:0;background:transparent;color:inherit;cursor:pointer;font-weight:400}
+.iad-summary-ui .ias-async-option:hover,.iad-summary-ui .ias-async-option:focus{background:var(--tblr-bg-surface-secondary,#e9effa)}
+.iad-summary-ui .ias-async-hint{padding:9px 12px;opacity:.7;font-size:12px}
+
+/* Autocomplete: neutral white suggestions, blue only on hover/focus.
+   More specific than legacy .ias-filters button rules. */
+.iad-summary-ui .ias-filters .ias-async-menu {
+  background: #fff;
+  color: #253247;
+  border: 1px solid #dce2eb;
+  border-radius: 6px;
+  padding: 4px;
+  max-height: 230px;
+}
+.iad-summary-ui .ias-filters .ias-async-menu button.ias-async-option {
+  display: block;
+  width: 100%;
+  min-height: 0;
+  height: auto;
+  margin: 0;
+  padding: 9px 12px;
+  border: 0;
+  border-radius: 4px;
+  background: #fff;
+  color: #253247;
+  box-shadow: none;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.45;
+  text-align: left;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  cursor: pointer;
+}
+.iad-summary-ui .ias-filters .ias-async-menu button.ias-async-option:hover,
+.iad-summary-ui .ias-filters .ias-async-menu button.ias-async-option:focus-visible {
+  background: #e8f0ff;
+  color: #1356ba;
+  outline: none;
+}
+.iad-summary-ui .ias-filters .ias-async-hint {
+  background: #fff;
+  color: #66758a;
+}

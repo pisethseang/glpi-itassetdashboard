@@ -1,0 +1,1 @@
+Summary application autocomplete searches the server after 2 characters, debounced 350ms, max 25 results. Both Matrix and Version Analysis use it. The old 2000-title list and costly version-choices aggregation have been removed. Hardware/Software reports untouched. Verify database SQL, browser and GLPI runtime before LIVE.
